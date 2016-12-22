@@ -41,7 +41,6 @@
     }, options);
 		var supportedBrowser = !!window.HTMLCanvasElement;
 		var isFeedbackButtonNative = settings.feedbackButton == '.feedback-btn';
-		var _html2canvas = false;
 		if (supportedBrowser) {
 			if(isFeedbackButtonNative) {
 				$('body').append('<button class="feedback-btn feedback-btn-gray">' + settings.initButtonText + '</button>');
@@ -49,11 +48,6 @@
 			$(document).on('click', settings.feedbackButton, function(){
 				if(isFeedbackButtonNative) {
 					$(this).hide();
-				}
-				if (!_html2canvas) {
-					$.getScript(settings.html2canvasURL, function() {
-						_html2canvas = true;
-					});
 				}
 				var canDraw = false,
 					img = '',
