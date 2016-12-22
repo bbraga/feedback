@@ -510,7 +510,8 @@
 						$.ajax({
 							url: settings.ajaxURL,
 							dataType: 'json',
-							type: 'POST',
+							contentType: 'application/json; charset=utf-8',
+        					type: 'POST',
 							data: data,
 							success: function() {
 								$('#feedback-module').append(settings.tpl.submitSuccess);
