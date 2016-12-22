@@ -506,7 +506,7 @@
 
 						post.img = img;
 						post.note = $('#feedback-note').val();
-                        var data = {feedback: JSON.stringify(post)};
+                        var data = JSON.stringify(post);
 						$.ajax({
 							url: settings.ajaxURL,
 							dataType: 'json',
