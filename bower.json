@@ -1,0 +1,7 @@
+{
+    "name": "feedback",
+    "main": "stable/2.0/feedback.js",
+    "dependencies": {
+        "html2canvas": "~0.4.1"
+    }
+}
